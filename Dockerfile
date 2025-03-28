@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN mvn clean package
+RUN --mount=type=cache,target=/root/.m2 ./mvnw -f ./pom.xml clean package
 
 RUN mvnw package -DskipTests
 
