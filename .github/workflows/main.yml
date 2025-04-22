@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu:latest
     steps:
 
     - name: checkout repo
@@ -27,4 +27,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/docker-utilizing-reg:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/express-app:latest
