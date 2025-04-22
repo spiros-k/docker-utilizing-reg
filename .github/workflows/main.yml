@@ -23,8 +23,8 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build-Push image
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v2
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/cicdimage:v1
+        tags: ${{ secrets.DOCKER_USERNAME }}/docker-utilizing-reg:latest
